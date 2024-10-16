@@ -1,5 +1,5 @@
 function getsmallestElement(arr: number[]){
-    let smallestElement = 0
+    let smallestElement = arr[0]
     let smallestElementIndex = 0
     arr.forEach((element, index) => {
         if(element < smallestElement){
