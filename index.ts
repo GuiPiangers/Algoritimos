@@ -10,7 +10,7 @@ console.log("-----------------------------")
 // simple short
 const testList2 = [4,1,6,2,7,3]
 console.log("simple sort result:",simpleShort(testList2))
-console.log("-----------------------------")""
+console.log("-----------------------------")
 // quick short"
 const testList3 = [1,6,2,7,3, 8]
 console.log("quick sort result:",quickShort(testList3))
