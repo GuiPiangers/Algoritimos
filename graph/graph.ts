@@ -32,6 +32,7 @@ grafo["tom"] = []
 grafo["john"] = []
 
 // Criando uma fila para analisar a pessoa mais próxima que termina com a letra "m" 
+// Pesquisa em largura
 
 const finishWithM = (person: string) => person[person.length - 1] === "m"
 
