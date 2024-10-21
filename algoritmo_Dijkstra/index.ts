@@ -1,4 +1,4 @@
-type hashTable<T> = {[key: string]: T}
+export type hashTable<T> = {[key: string]: T}
 
 const grafo = {} as hashTable<hashTable<number>>
 grafo["inicio"] = {} 
