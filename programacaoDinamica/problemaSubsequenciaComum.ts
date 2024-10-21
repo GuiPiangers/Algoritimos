@@ -8,12 +8,12 @@ function maiorSbstringCommum(palavra1: string, palavra2: string) {
             if(palavra1[line - 1] === palavra2[column - 1]){
                 table[line][column] = table[line - 1][column - 1] + 1
             } else{
-                table[line][column] = 0
+                table[line][column] = table[line - 1][column - 1]
             }
         }
     }
     console.log(table)
 }
 
-maiorSbstringCommum('vista', 'hish')
+maiorSbstringCommum('fort', 'fosh')
 
