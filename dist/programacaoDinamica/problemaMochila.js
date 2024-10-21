@@ -20,12 +20,13 @@ function knapsack(values, weights, capacity) {
         }
     }
     // O valor máximo estará em dp[n][capacity].
+    console.log(dp);
     return dp[n][capacity];
 }
 // Exemplo de uso:
-const values = [60, 100, 120, 200]; // Valores dos itens
-const weights = [1, 2, 3, 5]; // Pesos dos itens
-const capacity = 8; // Capacidade máxima da mochila
+const values = [10, 3, 9, 5, 6]; // Valores dos itens
+const weights = [3, 1, 2, 2, 1]; // Pesos dos itens
+const capacity = 6; // Capacidade máxima da mochila
 const maxVal = knapsack(values, weights, capacity);
 console.log(`O valor máximo que pode ser obtido é: ${maxVal}`);
 //# sourceMappingURL=problemaMochila.js.map

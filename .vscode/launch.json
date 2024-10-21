@@ -12,7 +12,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/programacaoDinamica/problemaMochila.ts",
+            "program": "${workspaceFolder}/programacaoDinamica/problemaSubstringComum.ts",
             "preLaunchTask": "tsc: build - tsconfig.json",
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
