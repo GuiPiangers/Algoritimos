@@ -1,6 +1,6 @@
 // Verificar a similaridade entre pessoas de acordo com o gosto
 
-interface user {
+interface User {
     acao: number
     drama: number
     comedia: number
@@ -8,7 +8,7 @@ interface user {
     romance: number
 }
 
-const users = {
+const users: {[key:string]: User} = {
     eduardo: {
         acao: 4,
         drama: 4,
@@ -38,7 +38,7 @@ const users = {
         romance: 4.5
     }}
 
-function calculateUserProximity(user1: user, user2: user){
+function calculateUserProximity(user1: User, user2: User){
     const values1 = Object.values(user1)
     const values2 = Object.values(user2)
 
@@ -50,7 +50,24 @@ function calculateUserProximity(user1: user, user2: user){
     return Math.sqrt(valueComparation)
 }
 
-function getNestBraderhood (user: user){
-    
+function getNestBraderhood (userName: string){
+    const user = users[userName]
+    const nestBraderhood: ({value: number} & User)[] = []
+    for(let key in users){
+        if(!(key === userName)){
+
+        const value = calculateUserProximity(user, users[key])
+
+        if(
+            nestBraderhood.length <= 0 ||
+            value >= nestBraderhood[nestBraderhood.length - 1].value){
+            nestBraderhood.push({value, ...users[key]})
+        } else{
+            nestBraderhood.forEach((item, index) => {
+                if(value < item.value) nestBraderhood.splice(index, 0, {value, ...users[key]})
+            });
+        }}
+    }
+    return nestBraderhood
 }
-console.log(calculateUserProximity(users.eduardo, users.henrique))
+console.log(getNestBraderhood('eduardo'))
