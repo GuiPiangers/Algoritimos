@@ -10,11 +10,11 @@ function maiorSbstringCommum(palavra1, palavra2) {
                 table[line][column] = table[line - 1][column - 1] + 1;
             }
             else {
-                table[line][column] = 0;
+                table[line][column] = Math.max(table[line - 1][column], table[line][column - 1]);
             }
         }
     }
     console.log(table);
 }
-maiorSbstringCommum('vista', 'hish');
-//# sourceMappingURL=problemaSubstringComum.js.map
+maiorSbstringCommum('fish', 'fosh');
+//# sourceMappingURL=problemaSubsequenciaComum.js.map
