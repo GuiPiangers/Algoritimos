@@ -10,7 +10,7 @@ function bubbleSort(list: number[]){
 
             }
         }
-        if (changes <= 1) break
+        if (changes <= 0) break
     }
 }
 const array =[3, 8, 2, 4, 1, 7, 10, 2, 20, 6, 9, 5]
