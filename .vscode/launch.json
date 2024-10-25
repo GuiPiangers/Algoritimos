@@ -7,6 +7,19 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "MergeSort",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/shorts/mergeSort.ts",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
+        },      
+        {
+            "type": "node",
+            "request": "launch",
             "name": "HeapSort",
             "skipFiles": [
                 "<node_internals>/**"
